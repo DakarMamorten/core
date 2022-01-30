@@ -7,10 +7,9 @@ public class Person {
     public Person(String name, String surname) {
         this.name = name;
         this.surname = surname;
-        Math.random();
     }
 
-    public static void bark(){
+    public static void bark() {
         System.out.println("Bark");
     }
 
