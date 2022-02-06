@@ -27,7 +27,7 @@ public class LottoCollections {
     private Set<Integer> getNumbersFromUser() {
         Set<Integer> numbers = new TreeSet<>();
         Scanner scanner = new Scanner(System.in);
-       System.out.print("Input six numbers divided by space: ");
+        System.out.print("Input six numbers divided by space: ");
         for (int i = 0; i < COUNT_NUMBERS; i++) {
             numbers.add(scanner.nextInt());
         }

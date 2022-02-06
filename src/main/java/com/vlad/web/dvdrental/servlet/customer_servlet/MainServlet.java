@@ -13,14 +13,13 @@ import java.io.IOException;
  */
 @WebServlet(urlPatterns = "/customer/main")
 public class MainServlet extends HttpServlet {
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/customer/main.jsp");
-		try {
-			dispatcher.forward(req, resp);
-		}
-		catch (ServletException | IOException e) {
-			e.printStackTrace();
-		}
-	}
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/customer/main.jsp");
+        try {
+            dispatcher.forward(req, resp);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

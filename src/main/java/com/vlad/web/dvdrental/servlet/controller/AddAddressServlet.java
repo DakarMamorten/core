@@ -20,27 +20,25 @@ public class AddAddressServlet extends HttpServlet {
         RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/address/add.jsp");
         try {
             dispatcher.forward(req, resp);
-        }
-        catch (ServletException | IOException e) {
+        } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp){
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         String address = req.getParameter("address");
         String address2 = req.getParameter("address2");
         String district = req.getParameter("district");
         int cityId = Integer.parseInt(req.getParameter("cityId"));
         String postalCode = req.getParameter("postalCode");
         String phone = req.getParameter("phone");
-        AddressDTO addressDTO = new AddressDTO(address,address2,district,cityId,postalCode,phone);
+        AddressDTO addressDTO = new AddressDTO(address, address2, district, cityId, postalCode, phone);
 
         addressHibernateDAO.save(addressDTO);
-        try{
+        try {
             resp.sendRedirect("/dvd-rental/address/add");
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 

@@ -1,4 +1,4 @@
 package com.vlad.epam.domain;
 
-public class Chicken extends Food{
+public class Chicken extends Food {
 }

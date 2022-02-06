@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Setter
@@ -22,7 +23,7 @@ public class Address {
     private String district;
     @Column(name = "city_id")
     private int cityId;
-    @Column(name= "postal_code")
+    @Column(name = "postal_code")
     private String postelCode;
     private String phone;
     @Column(name = "last_update")

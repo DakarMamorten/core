@@ -18,13 +18,13 @@ public class MyContainer<T> {
     public void add(int index, T element) {
         resize();
         if (size < index) {
-            Object[] arr2 = new Object[arr.length +1];
+            Object[] arr2 = new Object[arr.length + 1];
             System.arraycopy(arr, 0, arr2, 0, size);
             arr = arr2;
         }
         if (arr[index] == null) {
             arr[index] = element;
-        }else {
+        } else {
             System.arraycopy(arr, index, arr, index + 1, size - index);
         }
         size++;

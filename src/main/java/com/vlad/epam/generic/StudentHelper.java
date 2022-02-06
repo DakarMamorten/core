@@ -4,7 +4,7 @@ package com.vlad.epam.generic;
 import com.vlad.epam.Student;
 
 public class StudentHelper {
-    public void searchOfGroup(Student[] array, String group){
+    public void searchOfGroup(Student[] array, String group) {
         for (Student student : array) {
             if (!student.getGroup().equals(group)) {
                 continue;
@@ -13,7 +13,7 @@ public class StudentHelper {
         }
     }
 
-    public void searchOfFak(Student [] array, String fak){
+    public void searchOfFak(Student[] array, String fak) {
         for (Student student : array) {
             if (!student.getFak().equals(fak)) {
                 continue;

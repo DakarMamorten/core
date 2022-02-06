@@ -28,13 +28,13 @@ public class FilmDAO implements AbstractDAO<Film> {
     @Override
     public List<Film> findAll() {
         List<Film> films = new ArrayList<>();
-        String sql = "SELECT * FROM film  ORDER BY film_id LIMIT 20" ;
+        String sql = "SELECT * FROM film  ORDER BY film_id LIMIT 20";
         return filmBuild(films, sql);
     }
 
     @Override
     public Film findById(Long id) {
-        String sql = "SELECT * FROM film WHERE id = " + id ;
+        String sql = "SELECT * FROM film WHERE id = " + id;
         try (Connection connection = DBConnectionSingleton.getInstance().getConnection()) {
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 ResultSet resultSet = statement.executeQuery();
@@ -72,7 +72,7 @@ public class FilmDAO implements AbstractDAO<Film> {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(data);
         String formatDateTime = entity.getLastUpdate().format(formatter);
         filmCategoryDAO.save(entity);
-        String sql = "INSERT INTO film_category VALUES (" + entity.getCategoryId() + "," + entity.getFilmId() + ",'"  + formatDateTime + "')";
+        String sql = "INSERT INTO film_category VALUES (" + entity.getCategoryId() + "," + entity.getFilmId() + ",'" + formatDateTime + "')";
         try (Connection connection = DBConnectionSingleton.getInstance().getConnection()) {
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.executeUpdate();
@@ -81,7 +81,6 @@ public class FilmDAO implements AbstractDAO<Film> {
             LOGGER.error("Error: " + exception.getMessage());
         }
     }
-
 
 
     private List<Film> filmBuild(List<Film> films, String sql) {

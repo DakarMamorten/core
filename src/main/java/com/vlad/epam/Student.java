@@ -136,7 +136,7 @@ public class Student implements Comparable<Student> {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!( o instanceof Student )) return false;
+        if (!(o instanceof Student)) return false;
         Student student = (Student) o;
         return id == student.id && telNumber == student.telNumber && curs == student.curs &&
                 Objects.equals(surname, student.surname) && Objects.equals(name, student.name) &&

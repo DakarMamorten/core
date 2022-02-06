@@ -11,7 +11,8 @@ import java.io.IOException;
 
 @WebServlet("/category/delete")
 public class CategoryDeleteServlet extends HttpServlet {
-    private  final CategoryHibernateDAO categoryHibernateDAO = new CategoryHibernateDAO();
+    private final CategoryHibernateDAO categoryHibernateDAO = new CategoryHibernateDAO();
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         try {

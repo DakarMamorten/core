@@ -12,9 +12,9 @@ public class PersonService {
 
     public Optional<Person> findPersonByName(String name) {
         Person person = findPersonByNameInDB(name);
-        if (person!= null){
+        if (person != null) {
             return Optional.of(person);
-        }else {
+        } else {
             return Optional.empty();
         }
     }

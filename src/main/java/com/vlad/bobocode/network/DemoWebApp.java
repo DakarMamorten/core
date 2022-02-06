@@ -13,10 +13,10 @@ public class DemoWebApp {
                     var reader = new BufferedReader(new InputStreamReader(cleint.getInputStream()));
                     var line = reader.readLine();
                     System.out.println(cleint.getInetAddress().getHostAddress() + " - " + line);
-                }catch (Exception e) {
+                } catch (Exception e) {
                     e.printStackTrace();
+                }
             }
-        }
         }
     }
 }

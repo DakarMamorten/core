@@ -32,7 +32,7 @@ public class ActorDAO implements AbstractDAO<Actor> {
                     actor.setActorId(resultSet.getInt(1));
                     actor.setFirstName(resultSet.getString(2));
                     actor.setLastName(resultSet.getString(3));
-                    actor.setLastUpdate(LocalDateTime.parse(resultSet.getString(4),formatter));
+                    actor.setLastUpdate(LocalDateTime.parse(resultSet.getString(4), formatter));
                     listActor.add(actor);
                 }
             }

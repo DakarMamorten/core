@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
 @WebServlet(urlPatterns = "/address/main")
 public class MainServlet extends HttpServlet {
     @Override
@@ -14,8 +15,7 @@ public class MainServlet extends HttpServlet {
         RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/address/main.jsp");
         try {
             dispatcher.forward(req, resp);
-        }
-        catch (ServletException | IOException e) {
+        } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
     }

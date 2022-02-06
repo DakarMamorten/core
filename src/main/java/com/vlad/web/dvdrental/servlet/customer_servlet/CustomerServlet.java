@@ -15,19 +15,18 @@ import java.io.IOException;
  */
 @WebServlet(urlPatterns = "/customer/list")
 public class CustomerServlet extends HttpServlet {
-	final CustomerHibernateDAO customerHibernateDAO = new CustomerHibernateDAO();
+    final CustomerHibernateDAO customerHibernateDAO = new CustomerHibernateDAO();
 
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setAttribute("customer",customerHibernateDAO.findAll());
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/customer/list.jsp");
-		int pages = customerHibernateDAO.countPages();
-		req.setAttribute("pages", pages);
-		try {
-			dispatcher.forward(req, resp);
-		}
-		catch (ServletException | IOException e) {
-			e.printStackTrace();
-		}
-	}
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setAttribute("customer", customerHibernateDAO.findAll());
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/customer/list.jsp");
+        int pages = customerHibernateDAO.countPages();
+        req.setAttribute("pages", pages);
+        try {
+            dispatcher.forward(req, resp);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

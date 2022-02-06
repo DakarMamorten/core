@@ -15,9 +15,9 @@ public class Test {
         array[6] = new Student(7, "Emirov", "Avatar", "Konservov", "1998, 17, 31", "Naberezhnaya", 66417190, "Mexanika", 4, "MF-162");
 
         StudentHelper st = new StudentHelper();
-        st.searchOfGroup(array,"MF-162");
+        st.searchOfGroup(array, "MF-162");
         System.out.println("-------------------------------");
-        st.searchOfFak(array,"Ekonomicheskiy");
+        st.searchOfFak(array, "Ekonomicheskiy");
 
 
 
