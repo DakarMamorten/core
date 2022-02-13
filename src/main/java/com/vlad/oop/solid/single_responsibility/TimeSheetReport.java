@@ -1,4 +1,4 @@
-package com.vlad.wsh.oop.solid.single_responsibility;
+package com.vlad.oop.solid.single_responsibility;
 
 public class TimeSheetReport {
     public void printTimeSheetReport() {

@@ -1,4 +1,4 @@
-package com.vlad.wsh.oop.solid.single_responsibility;
+package com.vlad.oop.solid.single_responsibility;
 
 /**
  * A class should only have one responsibility. Furthermore, it should only have one reason to change.
@@ -16,6 +16,5 @@ public class Employee {
     public String getName() {
         return name;
     }
-
 
 }
