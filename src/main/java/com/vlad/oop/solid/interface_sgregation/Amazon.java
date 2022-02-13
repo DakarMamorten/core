@@ -1,4 +1,4 @@
-package com.vlad.wsh.oop.solid.interface_sgregation;
+package com.vlad.oop.solid.interface_sgregation;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import java.util.List;
  * larger interfaces should be split into smaller ones. By doing so,
  * we can ensure that implementing classes only need to be concerned about the methods that are of interest to them.
  */
-public class Amazon implements CloudeStorageProvider, CDNProvider, CloudHostingProvider {
+public class Amazon implements CloudStorageProvider, CDNProvider, CloudHostingProvider {
     @Override
     public void getCDNAddress() {
 

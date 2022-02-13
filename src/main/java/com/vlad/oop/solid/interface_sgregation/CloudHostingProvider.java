@@ -1,4 +1,4 @@
-package com.vlad.wsh.oop.solid.interface_sgregation;
+package com.vlad.oop.solid.interface_sgregation;
 
 import java.util.List;
 
