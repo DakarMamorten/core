@@ -1,4 +1,4 @@
-package com.vlad.wsh.oop.solid.liskov_sub;
+package com.vlad.oop.solid.liskov_sub.first_example;
 
 public class Engine {
     public void on() {
