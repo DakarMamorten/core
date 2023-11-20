@@ -20,7 +20,7 @@
 
     <c:forEach items="${requestScope.category}" var="item">
         <tr>
-            <td><input type="radio" id="radioButton" name="categoryId" value="${item.categoryID}"/></td>
+             <td><input type="radio" id="radioButton" name="categoryId" value="${item.categoryID}"/></td>
             <td>${item.categoryID}</td>
             <td>${item.name}</td>
             <td>${item.lastUpdate}</td>

@@ -8,7 +8,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Person {
-    private String name;
-    private String age;
-    private String score;
+    private String brand;
+    private String model;
+    private String startYear;
+    private String endYear;
+
 }

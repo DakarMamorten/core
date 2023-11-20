@@ -12,6 +12,11 @@ import java.util.List;
 import java.util.Map;
 
 public class ReadDataFromExcel {
+
+    /**
+     *
+     * @param args
+     */
     @SneakyThrows
     public static void main(String[] args) {
         FileInputStream file = new FileInputStream(new File("D:\\Person.xlsx"));
@@ -32,7 +37,7 @@ public class ReadDataFromExcel {
 
         for (List<String> value : data.values()) {
             for (int j = 0; j < value.size(); j++) {
-                 person = new Person(value.get(0), value.get(1), value.get(2));
+                 person = new Person(value.get(0), value.get(1), value.get(2),value.get(4));
             }
             list.add(person);
 
