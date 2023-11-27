@@ -1,46 +1,31 @@
 package com.vlad.education;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
+
 import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 
 //Immutability
+@Getter
+@ToString
+@EqualsAndHashCode
 public final class Employee {
-    private Address address;
-    private String name;
-    private List<String> codes;
-    private LocalDate date;
+    private final Address address;
+    private final String name;
+    private final List<String> codes;
+    private final LocalDate date;
 
-    public Employee(Address address, String name, List<String> codes, LocalDate date) {
+    private Employee(Address address, String name, List<String> codes, LocalDate date) {
         this.address = address;
         this.name = name;
         this.codes = Collections.unmodifiableList(codes);
         this.date = date;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public List<String> getCodes() {
-        return codes;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "address=" + address +
-                ", name='" + name + '\'' +
-                ", codes=" + codes +
-                ", date=" + date +
-                '}';
+    public static Employee of(Address address, String name, List<String> codes, LocalDate date){
+       return  new Employee(address, name, codes, date);
     }
 }

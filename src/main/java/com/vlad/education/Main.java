@@ -1,26 +1,64 @@
 package com.vlad.education;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class Main {
     public static void main(String[] args) {
-        Map<Employee, Long> map = new HashMap<>();
-        List<String> stringList = new ArrayList<>();
-        stringList.add("Vlad");
-
-        Employee employee = new Employee(new Address("123","321","333"),"Vlad",stringList, LocalDate.now() );
 
 
+//        People worker = new Worker("Vlad ", LocalDate.of(1996, 4, 25), true);
+//        People juniorWorker = new JuniorWorker("Kirill", LocalDate.of(1996, 4, 25));
+//        List<People> workersList = new ArrayList<>();
+//        workersList.add(worker);
+//        workersList.add(juniorWorker);
 
-        employee.getCodes().add("Vasya");
 
-        System.out.println(employee);
+//        Map<Address, Long> map = new HashMap<>();
+//        Address address = new Address("1-Str", "sd", "fg");
+//        for (int i = 0; i < 5_000; i++) {
+//            map.put(new Address(UUID.randomUUID().toString(),UUID.randomUUID().toString(),UUID.randomUUID().toString()),3L);
+//        }
+//        map.put(address,3L);
+//        long start = System.nanoTime();
+//        map.get(address);
+//        long end = System.nanoTime();
+//        System.out.println(end-start);
+
+
+//        //equals & hashcode
+//        Set<Address> addresses = new HashSet<>();
+//        Address address = new Address("1-Str", "sd", "fg");
+//        addresses.add(address);
+//        Address address1 = new Address("1-Str", "sd123", "fg");
+//        addresses.add(address1);
+//        System.out.println(addresses);
+//        addresses.forEach(a-> System.out.println(a.hashCode()));
+//        System.out.println(addresses.contains(address1));
 //
-//        Employee employee = new Employee("Vlad");
+//        Map<Address,Long> map = new HashMap<>();
+//        map.put(address,5L);
+//        map.put(address1,10L);
+//        System.out.println(map);
+
+//        String str1 = "Vlad";
+//        String str2 = new String("Vlad");
+//
+//        System.out.println(str1 == str2);
+//        String intern = str2.intern();
+//        System.out.println(str1 == intern);
+
+
+//        Map<Employee, Long> map = new HashMap<>();
+//        List<String> stringList = new ArrayList<>();
+//        stringList.add("Vlad");
+//
+//        Employee employee = new Employee(new Address("123","321","333"),"Vlad",stringList, LocalDate.now() );
+//
+//
+//
+//        employee.getCodes().add("Vasya");
+//
+//        System.out.println(employee);
+//
+//        Employee employee =Employee.of();
 //
 //        map.put(employee, 5L);
 //        map.put(new Employee("Sergii"), 15L);

@@ -1,28 +1,21 @@
 package com.vlad.education;
 
+import lombok.Getter;
+import lombok.ToString;
+
 import java.util.Objects;
 
+@Getter
+@ToString
 public final class Address {
-    private String street;
-    private String house;
-    private String flat;
+    private final String street;
+    private final String house;
+    private final String flat;
 
     public Address(String street, String house, String flat) {
         this.street = street;
         this.house = house;
         this.flat = flat;
-    }
-
-    public String getStreet() {
-        return street;
-    }
-
-    public String getHouse() {
-        return house;
-    }
-
-    public String getFlat() {
-        return flat;
     }
 
     @Override
