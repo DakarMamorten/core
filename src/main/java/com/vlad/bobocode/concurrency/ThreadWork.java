@@ -1,7 +1,6 @@
 package com.vlad.bobocode.concurrency;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ForkJoinPool;
 
 /**
@@ -26,12 +25,7 @@ public class ThreadWork {
      * We create object Executor and call method execute() inside we call run()
      */
     private static void executeByExecutor() {
-        new Executor() {
-            @Override
-            public void execute(Runnable command) {
-                command.run();
-            }
-        }.execute(someLogic());
+        someLogic().run();
     }
 
     /**
